@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label 
+                Text="Bill" 
+                SemanticProperties.Description="Price of Order"/>
+            <Entry 
+                Placeholder="Enter Amount" 
+                SemanticProperties.Hint="Type Amount" 
+                Keyboard="Numeric" 
+                x:Name="AmountEntry"/>
+
+            <Label 
+                Text="Tip" 
+                SemanticProperties.Description="Amount of Tip"/>
+            <Label 
+                Text="0,00" 
+                x:Name="TotalTip" 
+                SemanticProperties.Description="TotalTip"/>
+
+            <Label 
+                Text="Total" 
+                SemanticProperties.Description="Total of Payment"/>
+            <Label 
+                Text="0,00" 
+                SemanticProperties.Description="Amount of Total" 
+                x:Name="AmountTotal"/>
+
+            <Label 
+                Text="TipPercentage" 
+                SemanticProperties.Description="TipPercentage"/>
+            <Label 
+                Text="0%" 
+                SemanticProperties.Description="TipPercentage" 
+                x:Name="TipPercentage"/>
+
+            <Slider 
+                x:Name="SliderTipPercent"
+                Minimum="0"
+                Maximum="100"
+                ValueChanged="OnValueChange"/>
+
+            <Button 
+                Text="15%" 
+                SemanticProperties.Hint="15 Percent" 
+                x:Name="Btn15"
+                Clicked="OnFifteenPercentMethod"/>
+            <Button 
+                Text="20%" 
+                SemanticProperties.Hint="20 Percent" 
+                x:Name="Btn20"
+                Clicked="OnTwentyPercentMethod"/>
+            <Button 
+                Text="Round Down" 
+                SemanticProperties.Hint="Round Up" 
+                x:Name="RoundDownBtn"
+                Clicked="OnRoundDownMethod"/>
+            <Button 
+                Text="Round Up" 
+                SemanticProperties.Hint="Round Up" 
+                x:Name="RoundUpBtn"
+                Clicked="OnRoundUpMethod"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
