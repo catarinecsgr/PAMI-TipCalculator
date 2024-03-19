@@ -13,15 +13,15 @@
                 SemanticProperties.Description="Price of Order"/>
 
             <Entry 
-                Placeholder="Enter Amount" 
-                SemanticProperties.Hint="Type Amount" 
-                Keyboard="Numeric" 
+                Placeholder="Enter Amount:"
+                SemanticProperties.Hint="Type Amount"
+                Keyboard="Numeric"
                 x:Name="AmountEntry"
                 HorizontalOptions="Fill"/>
 
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="25">
                 <Label 
-                    Text="Tip" 
+                    Text="Tip:" 
                     SemanticProperties.Description="Amount of Tip"/>
                 <Label 
                     Text="0,00" 
@@ -29,18 +29,18 @@
                     SemanticProperties.Description="TotalTip"/>
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="25">
                 <Label 
-                    Text="Total" 
+                    Text="Total:" 
                     SemanticProperties.Description="Total of Payment"/>
                 <Label 
                     Text="0,00" 
                     SemanticProperties.Description="Amount of Total" 
                     x:Name="AmountTotal"/>
             </HorizontalStackLayout>
-            <HorizontalStackLayout Spacing="10">
+            <HorizontalStackLayout Spacing="25">
                 <Label 
-                    Text="TipPercentage" 
+                    Text="TipPercentage:" 
                     SemanticProperties.Description="TipPercentage"/>
                 <Label 
                     Text="0%" 
@@ -65,7 +65,7 @@
                     x:Name="Btn15"
                     Clicked="OnFifteenPercentMethod"
                     VerticalOptions="Center"
-                    WidthRequest="100"/>
+                    WidthRequest="120"/>
                 <Button 
                     BackgroundColor="#69688c"
                     Text="20%" 
@@ -73,18 +73,18 @@
                     x:Name="Btn20"
                     Clicked="OnTwentyPercentMethod"
                     VerticalOptions="Center"
-                    WidthRequest="100"/>
+                    WidthRequest="120"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
                 <Button 
                     BackgroundColor="#69688c"
                     Text="Round Down" 
-                    SemanticProperties.Hint="Round Up" 
+                    SemanticProperties.Hint="Round Down" 
                     x:Name="RoundDownBtn"
                     Clicked="OnRoundDownMethod"
                     VerticalOptions="Center"
                     HorizontalOptions="Fill"
-                    WidthRequest="100"/>
+                    WidthRequest="120"/>
                 <Button 
                     BackgroundColor="#69688c"
                     Text="Round Up" 
@@ -93,7 +93,7 @@
                     Clicked="OnRoundUpMethod"
                     VerticalOptions="Center"
                     HorizontalOptions="Fill"
-                    WidthRequest="100"/>
+                    WidthRequest="120"/>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
