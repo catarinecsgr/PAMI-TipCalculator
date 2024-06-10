@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto, *, Auto, Auto, Auto"
+          ColumnDefinitions="*, *"
+          Padding="40">
+
+            <Label
+                VerticalOptions="Center" Grid.Row="0" Grid.Column="0"
+                Text="Valor da gorjeta"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+                VerticalOptions="Center" Grid.Row="0" Grid.Column="1"
+                x:Name="ValueEntry"
+                Text="0"
+                Placeholder="Digite o valor do pedido"/>
+
+            <Label Text="Tip:" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="0.00" x:Name="LabelTipValue" VerticalOptions="Center" Grid.Row="1" Grid.Column="1"/>
+
+
+            <Label Text="Total:" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="0.00" x:Name="LabelTotalValue" VerticalOptions="Center" Grid.Row="2" Grid.Column="1"/>
+
+
+            <Label Text="Tip Percentage:" VerticalOptions="End" Grid.Row="3" Grid.Column="0"/>
+            <Label Text="0%" x:Name="LabelPercentageValue" VerticalOptions="End" Grid.Row="3" Grid.Column="1"/>
+
+            <Slider
+                x:Name="SliderTipPercent"
+                Minimum="0"
+                Maximum="100"
+                ValueChanged="SliderTipPercent_ValueChanged"
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+
+            <Button
+                x:Name="Button15Percent"
+                Text="15%" 
+                HorizontalOptions="FillAndExpand" 
+                Clicked="OnButton15PercentClicked"
+                Margin="5"
+                Grid.Row="5"
+                Grid.Column="0"/>
+
+            <Button
+                x:Name="Button20Percent"
+                Text="20%" 
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnButton20PercentClicked"
+                Margin="5"
+                Grid.Row="5"
+                Grid.Column="1"/>
+
+
+            <Button
+                x:Name="ButtonRoundDown"
+                Text="Arredondar para baixo" 
+                HorizontalOptions="EndAndExpand"
+                Clicked="OnButtonRoundDownClicked"
+                Margin="5"
+                Grid.Row="6"
+                Grid.Column="0"/>
+
+            <Button
+                x:Name="ButtonRoundUp"
+                Text="Arredondar para cima" 
+                HorizontalOptions="FillAndExpand"
+                Clicked="OnButtonRoundUpClicked"
+                Margin="5"
+                Grid.Row="6"
+                Grid.Column="1"/>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
